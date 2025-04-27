@@ -52,7 +52,13 @@ def init_and_push(url, name):
     subprocess.run(["git", "add", "."])
     subprocess.run(["git", "commit", "-m", f"Initial commit: {name}"])
     subprocess.run(["git", "branch", "-M", "main"])
+
+    if not GITHUB_USERNAME or not GITHUB_TOKEN:
+        print("Error: Username or Token not set")
+        exit(1)
+
     auth_url = url.replace("https://", f"https://{GITHUB_USERNAME}:{GITHUB_TOKEN}@")
+    subprocess.run(["git", "remote", "remove", "origin"], stderr=subprocess.DEVNULL)
     subprocess.run(["git", "remote", "add", "origin", auth_url])
     subprocess.run(["git", "push", "-u", "origin", "main"])
 
