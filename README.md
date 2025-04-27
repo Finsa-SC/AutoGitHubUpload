@@ -4,6 +4,9 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Ollama](https://img.shields.io/badge/Ollama-AI%20Powered-green?style=for-the-badge)
 
+## 👋 For Your Information
+I uploaded this project using this project myself, starting from making repository in the github, the name of repository, description even commit done automatically by this program. this really saves my time 85%
+
 ## 📋 Overview
 
 This automation tool simplifies the process of creating GitHub repositories and pushing your local projects to GitHub. It leverages local LLM capabilities through Ollama to generate intelligent project names and descriptions, saving you time and effort.
@@ -53,12 +56,13 @@ OLLAMA_MODEL = "openchat:latest"  # or any other Ollama model you have installed
 4. The script will create a repository and push your project
 
 ## 🔮 Planned Features
+### What features will I add to my program next?
 
 - 📝 **README Template Generation**: AI-powered creation of complete README files based on project content
 - 🚫 **Ignore File**: will ignore files that are not needed
 - 🛣️ **Effective path**: Insert the path through the terminal
 - 🕹️ **Manual Input**: You will be able to choose to use Chatbot or not to create a name and description
-- 🔔 **Notification**: will sound when you need input from the user and after the upload is complete
+- 🔔 **Notification**: will be heard when needing input from the user and after the upload is complete
 - 🔄 **Repeat execution**: if the program experiences malfunction, you can choose to repeat the program or manual input
 - 🔒 **Enhanced Security**: Better token management and secure authentication
 
