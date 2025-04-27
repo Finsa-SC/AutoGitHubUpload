@@ -52,7 +52,8 @@ def init_and_push(url, name):
     subprocess.run(["git", "add", "."])
     subprocess.run(["git", "commit", "-m", f"Initial commit: {name}"])
     subprocess.run(["git", "branch", "-M", "main"])
-    subprocess.run(["git", "remote", "add", "origin", url.replace("https://", f"https://{GITHUB_USERNAME}:{GITHUB_TOKEN}@")])
+    auth_url = url.replace("https://", f"https://{GITHUB_USERNAME}:{GITHUB_TOKEN}@")
+    subprocess.run(["git", "remote", "add", "origin", auth_url])
     subprocess.run(["git", "push", "-u", "origin", "main"])
 
 
