@@ -3,7 +3,7 @@ import subprocess
 import webbrowser
 import os
 
-GITHUB_USERNAME = "F!n5@"
+GITHUB_USERNAME = "F1n5a"
 GITHUB_TOKEN = input("Insert Your GitHub Token: ")
 PROJECT_PATH = "/home/mikohara-kohane/Mechine_Learning/Otomatisasi_Git"
 OLLAMA_MODEL = "openchat:latest"
@@ -19,7 +19,7 @@ def Model(prompt):
         "stream": False
     }
     try:
-        response = requests.post(url, headers=headers, json=data, timeout=30)
+        response = requests.post(url, headers=headers, json=data, timeout=60)
         response.raise_for_status()
         return response.json()["response"]
     except Exception as e:
@@ -69,7 +69,7 @@ def main():
 
     project_description_detail = input("📝 Describe your project briefly: ")
 
-    prompt = f"give me the name of the project and a description of the short project just make the {project_description_detail}"
+    prompt = f"give me the name of the project and a description of the short project just make the {project_description_detail}, for description, do not exceed 350 words, make under 350 words"
     response = Model(prompt)
 
     if response:
